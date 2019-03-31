@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        html {
+            width: 400px;
+            height: 300px;
+        }
+
+        body {
+            background: #27b227;
+        }
+
+        #menu>h4 {
+            color: white;
+        }
+
+        #submit {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head container-fluid">
+        <div class="row justify-content-center">
+            <div id="menu" class="col-md-7">
+                <h4 class="text-center">Логин</h4>
+                <input type="email" class="form-control col-md-12" id="login" placeholder="Enter login">
+            </div>
+            <div id="menu" class="col-md-7 ">
+                <h4 class="text-center">Пароль</h4>
+                <input type="password" class="form-control" id="pswd" placeholder="Enter password">
+            </div>
+            <a href="popup_register.html" class="col-md-12 text-center">Зарегистрироваться</a>
+            <div id="menu" class="col-md-7 ">
+                <button id="submit" class="btn btn-info col-md-8 offset-md-2">Войти</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="css/bootstrap.min.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

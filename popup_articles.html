@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        * {}
+
+        html {
+            width: 400px;
+            height: 300px;
+        }
+
+        .head {
+            background: #20e520;
+        }
+
+        #menu {
+            margin-top: 10px;
+            font-family: sans-serif;
+        }
+
+        .body {
+            background: #ffffff;
+        }
+
+        h2 {
+            font-size: 5vh;
+            line-height: 3vh;
+            color: white;
+        }
+
+        h2:hover {
+            color: pink;
+            cursor: pointer;
+        }
+
+        .experience {
+            border-radius: 10px;
+        }
+
+        .polosa {
+            background: #e0f20f;
+            border-radius: 10px;
+            margin-left: -15px;
+        }
+
+        #burger {
+            background-image: url(css/images/pull_panel.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 30px;
+            width: 30px;
+            border-radius: 4px;
+            opacity: .7;
+            position: relative;
+            margin-left: -5px;
+            margin-top: 5px;
+            z-index: 1;
+        }
+
+        .pd_menu {
+            position: absolute;
+            height: 300px;
+            width: 250px;
+            background: white;
+            margin-top: -70px;
+            z-index: 99;
+            position: absolute;
+            top: 70px;
+        }
+
+        #user_image {
+            background-image: url(css/images/user_av.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 75px;
+            border-radius: 100px;
+            opacity: .7;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        #user_name {
+            padding: 29px
+        }
+
+        .pd_menu_atr:hover {
+            background: silver;
+            cursor: pointer;
+        }
+
+        .hide_pd_menu {
+            background-image: url(css/images/hide_btn.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 20px;
+            width: 40px;
+            border-radius: 5px;
+            margin-top: -100px;
+            margin-left: 240px;
+            opacity: .7;
+        }
+
+        .hide_pd_menu:hover {
+            cursor: pointer;
+        }
+
+        .toread {
+            width: 150px;
+        }
+
+        .menu_btn {
+            text-decoration:none;
+            color: black;
+
+        }
+        .menu_btn:hover {
+            text-decoration:none;
+            color: black;
+        }
+        .article {
+            border-bottom: 1px solid #E6E6E6;
+            border-radius: 2px;
+            padding: 5px;
+            width: 100%
+        }
+        #scrol_articles {
+            height:255px;
+            width:400px;
+            border:1px solid #ccc;
+            font:16px/26px Georgia, Garamond, Serif;
+            overflow:auto;
+        }
+        .btn_delete {
+            position: absolute;
+            right: 0px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="osnov">
+        <div class="head container-fluid">
+            <div class="row">
+                <div id="menu " class="col-4">
+                    <h2 id="burger" class="text-left"></h2>
+                </div>
+                <div id="menu" class="col-4">
+                  <a class="menu_btn" href="popup_articles.html"><h2 class="toread text-left"></h2></a>
+                </div>
+                <div id="menu" class="col-4">
+                    <h2 class="text-right"></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="scrol_articles" class="container-fluid">
+        <div class="row">
+            <!-- <a style="" class="article" href="${articles[i]['url']}">Название статьи</a> -->
+            <!-- <btn class="btn_delete">Удалить</btn> -->
+        </div>
+    </div>
+    <div class="pd_menu">
+        <div id="nav_pd_pen" class="head container-fluid">
+            <div class=" row">
+                <div id="user_image" class=" col-3"></div>
+
+                <div id="user_name" class="col-4 ">
+                    <h5 class="login text-center">Name</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="pd_menu_atr col-12">
+            <h5><a class="menu_btn" href="popup_main.html">Главная</a></h5>
+        </div>
+        <div class="pd_menu_atr col-12">
+            <h5><a class="menu_btn" href="popup_articles.html?table=toread">Запланированное</a></h5>
+        </div>
+        <div class="pd_menu_atr col-12">
+            <h5><a class="menu_btn" href="popup_articles.html?table=favorite">Избранное</a></h5>
+        </div>
+        <div class="pd_menu_atr col-12">
+            <h5><a class="menu_btn" href="popup_articles.html?table=read">Прочитанное</a></h5>
+        </div>
+        <div class="pd_menu_atr col-12">
+            <h5><a class="menu_btn" href="popup_settings.html">Настройки</a></h5>
+        </div>
+        <div class="hide_pd_menu"></div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/articles.js"></script>
+    <script src="css/bootstrap.min.js"></script>
+</body>
+
+</html>

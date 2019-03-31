@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "WikiGame",
+    "version": "1.0",
+    "author": "Maxus619",
+    "description": "Дипломная работа",
+    "icons": {},
+
+    "content_scripts": [{
+        "matches": [
+            "http://*.wikipedia.org/*",
+            "https://*.wikipedia.org/*"
+        ],
+        "js": ["js/contentscript.js", "js/jquery-3.3.1.min.js"],
+        "run_at": "document_end"
+    }],
+    "background": {
+        "scripts": ["js/background.js"]
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "contextMenus",
+        "http://*.wikipedia.org/*/*",
+        "https://*.wikipedia.org/*/*",
+        "https://wikigame/*/*"
+    ],
+    "browser_action": {
+        "default_popup": "popup_auth.html"
+    },
+    "content_security_policy": "script-src 'self' https://wikigame/; object-src 'self'"
+}
