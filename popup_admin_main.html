@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        * {}
+
+        html {
+            width: 400px;
+            height: 300px;
+            background: #e4dbbf;
+        }
+
+        .head {
+            background: #70ab8f;
+        }
+        .osnov{
+            background: #e4dbbf;
+        }
+
+        #menu {
+            margin-top: 10px;
+            font-family: sans-serif;
+        }
+
+        .body {
+            background: #e4dbbf;
+        }
+
+        /* TODO: указать родителей h2 что бы потом не ебаться */
+
+        h2 {
+            font-size: 5vh;
+            line-height: 3vh;
+            color: #383127;
+        }
+
+        h2:hover {
+            color: #dc5b21;
+            cursor: pointer;
+        }
+
+        .experience {
+            border-radius: 10px;
+        }
+
+        .polosa {
+            background: #e0f20f;
+            border-radius: 10px;
+            margin-left: -15px;
+        }
+
+        #burger {
+            background-image: url(css/images/pull_panel.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 30px;
+            width: 30px;
+            border-radius: 4px;
+            opacity: .7;
+            position: relative;
+            margin-left: -5px;
+            margin-top: 5px;
+            z-index: 1;
+        }
+
+        .pd_menu {
+            position: absolute;
+            border: 1px solid #FFDAB9;
+            height: 300px;
+            width: 250px;
+            background: #e4dbbf;
+            margin-top: -70px;
+            z-index: 99;
+            top: 70px;
+        }
+
+        #user_image {
+            background-image: url(css/images/user_av.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 75px;
+            border-radius: 100px;
+            opacity: .7;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        #user_name {
+            padding: 29px
+        }
+
+        .pd_menu_atr:hover {
+            background: silver;
+            cursor: pointer;
+        }
+
+        .hide_pd_menu {
+            background-image: url(css/images/hide_btn.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 20px;
+            width: 40px;
+            border-radius: 5px;
+            margin-top: -100px;
+            margin-left: 240px;
+            opacity: .7;
+        }
+
+        .hide_pd_menu:hover {
+            cursor: pointer;
+        }
+
+        .toread {
+            width: 150px;
+        }
+
+        .menu_btn {
+            text-decoration:none;
+            color: black;
+
+        }
+
+        .menu_btn:hover {
+            text-decoration:none;
+            color: black;
+        }
+
+        .progress {
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="osnov">
+        <div class="head container-fluid">
+            <div class="row">
+                <div id="menu " class="col-4">
+                    <h2 id="burger" class="text-left"></h2>
+                </div>
+                <div id="menu" class="col-4">
+                  <a class="menu_btn" href="popup_articles.html"><h2 class="toread text-left"></h2></a>
+                </div>
+                <div id="menu" class="col-4">
+                    <h2 class="text-right">head</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="body container-fluid row justify-content-center">
+            <div class="lvl col-2">Lvl.</div>
+
+            <div class="progress col-9">
+                <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+            <div class="lvl col-1"></div>
+        </div>
+    </div>
+
+    <div class="pd_menu">
+        <div id="nav_pd_pen" class="head container-fluid">
+            <div class=" row">
+                <div id="user_image" class=" col-3"></div>
+
+                <div id="user_name" class="col-4 ">
+                    <h5 class="login text-center">Name</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="pd_menu_atr col-12">
+            <h6><a class="menu_btn" href="popup_main.html">Главная</a></h6>
+        </div>
+        <div class="pd_menu_atr col-12">
+            <h6><a class="menu_btn" href="popup_admin_users.html">Удаление пользователя</a></h6>
+        </div>
+        <div class="pd_menu_atr col-12">
+            <h6><a class="menu_btn" href="popup_articles.html?table=toread">Запланировано</a></h6>
+        </div>
+        <div class="pd_menu_atr col-12">
+            <h6><a class="menu_btn" href="popup_articles.html?table=favorite">Избранное</a></h6>
+        </div>
+        <div class="pd_menu_atr col-12">
+            <h6><a class="menu_btn" href="popup_articles.html?table=read">Прочитанное</a></h6>
+        </div>
+        <div class="pd_menu_atr col-12">
+            <h6><a class="menu_btn" href="popup_messages.html">Сообщения</a></h6>
+        </div>
+        <div class="pd_menu_atr col-12">
+            <h6>Настройка</h6>
+        </div>
+        <div class="hide_pd_menu"></div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="css/bootstrap.min.js"></script>
+</body>
+
+</html>

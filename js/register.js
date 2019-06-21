@@ -14,13 +14,14 @@ $('#submit').click(function() {
         alert('Email введён неправильно');
         return;
     }
-    if ($('#pswd').val().length < 6) {
-        alert('Пароль должен состоять из минимум 6 символов');
+    // Проврека на длину пароля
+    if ($('#pswd').val().length < 8) {
+        alert('Пароль должен содержать минимум 8 знаков');
         return;
     }
 
     $.ajax({
-        url: 'https://donexufa.ru/register.php',
+        url: 'https://wikigame/register.php',
         method: 'POST',
         data: {
             email: $('#email').val(),

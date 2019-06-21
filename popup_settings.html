@@ -14,7 +14,7 @@
         }
 
         .head {
-            background: #20e520;
+            background: #70ab8f;
         }
 
         #menu {
@@ -23,13 +23,14 @@
         }
 
         .body {
-            background: #ffffff;
+            background: #e4dbbf;
         }
 
         h2 {
             font-size: 5vh;
             line-height: 3vh;
             color: white;
+            color: #383127;
         }
 
         h2:hover {
@@ -63,7 +64,7 @@
             position: absolute;
             height: 300px;
             width: 250px;
-            background: white;
+            background: #e4dbbf;
             margin-top:-70px;
             z-index: 99;
             position: absolute;
@@ -111,7 +112,10 @@
         }
         .osnov{
            background-color: #D8D8D8;
-           height: 320px;
+           height: 300px;
+        }
+        .exit:hover {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -134,14 +138,8 @@
 
         <div id="scrol_dialog" class="container-fluid">
             <div id="dialog_window" >
-                <a class='exit'>Выйти</a>
-                <!-- <div class="text-center col-12"><h6>Name Dialog</h6></div>
-
-                <div id="message" class="col-6 text-left">1user message</div>
-                <div id="message" class="col-6 offset-6 text-right">2user message</div>
-                <div id="message" class="col-6 text-left">1user message</div>
-                <div id="message" class="col-6 text-left">1user message</div>
-                <div id="message" class="col-6 offset-6 text-right">2user message</div> -->
+                <button class='exit'>Выйти</button>
+                <button class='delete'>Удалить профиль</button>
             </div>
         </div>
     </div>
@@ -169,6 +167,9 @@
         </div>
         <div class="pd_menu_atr col-12">
             <h5><a class="menu_btn" href="popup_articles.html?table=read">Прочитанное</a></h5>
+        </div>
+        <div class="pd_menu_atr col-12">
+            <h5><a class="menu_btn" href="popup_messages.html">Сообщения</a></h5>
         </div>
         <div class="pd_menu_atr col-12">
             <h5><a class="menu_btn" href="popup_settings.html">Настройки</a></h5>

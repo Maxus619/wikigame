@@ -7,7 +7,7 @@ chrome.storage.local.get(['login', 'pswd'], function(result) {
 
     if (login && pswd) {
         $.ajax({
-            url: 'https://donexufa.ru/auth.php',
+            url: 'https://wikigame/auth.php',
             method: 'POST',
             data: {
                 login: login,
@@ -31,7 +31,7 @@ $('#submit').click(function() {
     }
 
     $.ajax({
-        url: 'https://donexufa.ru/auth.php',
+        url: 'https://wikigame/auth.php',
         method: 'POST',
         data: {
             login: $('#login').val(),
@@ -47,7 +47,7 @@ $('#submit').click(function() {
                 });
             }
             else {
-                alert('Неверный логин или пароль');
+                alert('Неправильный логин или пароль');
             }
         },
         error: function() {

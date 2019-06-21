@@ -2,9 +2,11 @@
     "manifest_version": 2,
     "name": "WikiGame",
     "version": "1.0",
-    "author": "Maxus619",
+    "author": "Gilev Maxim, Aminev Denis",
     "description": "Дипломная работа",
-    "icons": {},
+    "icons": {
+        "64": "/css/images/user_av.jpg"
+    },
 
     "content_scripts": [{
         "matches": [

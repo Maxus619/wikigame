@@ -14,7 +14,7 @@ toread_div.className = 'toread';
 toread_div.style.display = 'inline-block';
 toread_div.style.width = '50px';
 toread_div.style.height = '50px';
-toread_div.style.background = 'url(https://donexufa.ru/images/toread.png)';
+toread_div.style.background = 'url(https://wikigame/images/toread.png)';
 toread_div.style.backgroundSize = 'cover';
 toread_div.style.title = 'Добавить в запланированное';
 toread_div.onclick = function() {
@@ -25,7 +25,7 @@ read_div.className = 'read';
 read_div.style.display = 'inline-block';
 read_div.style.width = '50px';
 read_div.style.height = '50px';
-read_div.style.background = 'url(https://donexufa.ru/images/read.png)';
+read_div.style.background = 'url(https://wikigame/images/read.png)';
 read_div.style.backgroundSize = 'cover';
 read_div.style.title = 'Пометить статью прочитанной';
 read_div.onclick = function() {
@@ -36,7 +36,7 @@ favorite_div.className = 'favorite';
 favorite_div.style.display = 'inline-block';
 favorite_div.style.width = '50px';
 favorite_div.style.height = '50px';
-favorite_div.style.background = 'url(https://donexufa.ru/images/fav1.png)';
+favorite_div.style.background = 'url(https://wikigame/images/fav1.png)';
 favorite_div.style.backgroundSize = 'cover';
 favorite_div.style.title = 'Добавить в избранное';
 favorite_div.onclick = function() {
@@ -58,7 +58,7 @@ function addArticle(table) {
 
         if (login && pswd) {
             $.ajax({
-                url: 'https://donexufa.ru/articles.php',
+                url: 'https://wikigame/articles.php',
                 method: 'POST',
                 data: {
                     login: login,

@@ -13,15 +13,24 @@
         }
 
         body {
-            background: #27b227;
+            background: #70ab8f;
         }
 
         #menu>h4 {
-            color: white;
+            color: #383127;
         }
 
         #submit {
             margin-top: 10px;
+            background: #dc5b21;
+            border: 0px;
+        }
+        #href{
+            color: #383127;
+        }
+
+        .form-control {
+            background-color: #e4dbbf;
         }
     </style>
 </head>
@@ -31,17 +40,17 @@
         <div class="row justify-content-center">
             <div id="menu" class="col-md-7">
                 <h4 class="text-center">Электронная почта</h4>
-                <input type="email" class="form-control col-md-12" id="email" placeholder="Enter email">
+                <input type="email" class="form-control col-md-12" id="email" placeholder="Введите email">
             </div>
             <div id="menu" class="col-md-7">
                 <h4 class="text-center">Логин</h4>
-                <input type="email" class="form-control col-md-12" id="login" placeholder="Enter login">
+                <input type="email" class="form-control col-md-12" id="login" placeholder="Введите логин">
             </div>
             <div id="menu" class="col-md-7 ">
                 <h4 class="text-center">Пароль</h4>
-                <input type="password" class="form-control" id="pswd" placeholder="Enter password">
+                <input type="password" class="form-control" id="pswd" placeholder="Введите пароль">
             </div>
-            <a href="popup_auth.html" class="text-center">Авторизироваться</a>
+            <a href="popup_auth.html" id="href" class="text-center">Авторизироваться</a>
             <div id="menu" class="col-md-7 ">
                 <button id="submit" class="btn btn-info col-md-8 offset-md-2">Регистрация</button>
             </div>

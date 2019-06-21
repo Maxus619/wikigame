@@ -17,9 +17,9 @@ chrome.storage.local.get(['login', 'pswd'], function(result) {
 
     $('.login').html(login);
 
-    // Вывод количества запланированного
+    // Вывод запланированного
     $.ajax({
-        url: 'https://donexufa.ru/articles.php',
+        url: 'https://wikigame/articles.php',
         method: 'POST',
         data: {
             login: login,
@@ -29,16 +29,16 @@ chrome.storage.local.get(['login', 'pswd'], function(result) {
         },
         crossDomain: true,
         success: function(data) {
-            $('.toread').html('Запланированно (' + Object.keys(JSON.parse(data)).length + ')');
+            $('.toread').html('Запланировано (' + Object.keys(JSON.parse(data)).length + ')');
         },
         error: function() {
             alert('Не удалось совершить запрос');
         }
     });
 
-    // Вычисление и вывод уровня
+    // Вывод уровня
     $.ajax({
-        url: 'https://donexufa.ru/articles.php',
+        url: 'https://wikigame/articles.php',
         method: 'POST',
         data: {
             login: login,
@@ -52,6 +52,7 @@ chrome.storage.local.get(['login', 'pswd'], function(result) {
             var lvl = 1;
             var user = JSON.parse(data);
             var exp = parseFloat(user.experience);
+            // TODO: вычисление опыта
             while (exp >= base_exp) {
                 exp -= base_exp;
                 lvl++;
@@ -70,7 +71,7 @@ chrome.storage.local.get(['login', 'pswd'], function(result) {
 
     // Вывод рейтинга
     $.ajax({
-        url: 'https://donexufa.ru/rating.php',
+        url: 'https://wikigame/rating.php',
         method: 'POST',
         crossDomain: true,
         success: function(data) {

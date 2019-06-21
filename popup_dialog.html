@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        html {
+            width: 400px;
+            height: 300px;
+            background: #e4dbbf;
+        }
+
+        .head {
+            background: #70ab8f;
+        }
+
+        #menu {
+            margin-top: 10px;
+            font-family: sans-serif;
+        }
+
+        .body {
+            background: #e4dbbf;
+        }
+
+        h2 {
+            font-size: 5vh;
+            line-height: 3vh;
+            color: #383127;
+        }
+
+        h2:hover {
+            color: #dc5b21;
+            cursor: pointer;
+        }
+
+        .experience {
+            border-radius: 10px;
+        }
+
+        .polosa {
+            background: #e0f20f;
+            border-radius: 10px;
+            margin-left: -15px;
+        }
+        #burger{
+            background-image: url(css/images/pull_panel.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 30px;
+            width: 30px;
+            border-radius: 4px;
+            opacity: .7;
+            position: relative;
+            margin-left: -5px;
+            margin-top: 5px;
+            z-index: 1;
+        }
+        .pd_menu{
+            position: absolute;
+            height: 300px;
+            width: 250px;
+            background: #e4dbbf;
+            margin-top: -70px;
+            z-index: 99;
+            position: absolute;
+            top: 70px;
+        }
+        #user_image{
+            background-image: url(css/images/user_av.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 75px;
+            opacity: .7;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        #user_name{
+            padding: 29px
+        }
+
+        .pd_menu_atr {
+            height: 30px;
+        }
+        .pd_menu_atr:hover {
+            background: silver;
+            cursor: pointer;
+        }
+        .hide_pd_menu{
+            background-image: url(css/images/hide_btn.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 20px;
+            width: 40px;
+            border-radius: 5px;
+            margin-top: -100px;
+            margin-left: 240px;
+            opacity: .7;
+        }
+        .hide_pd_menu:hover{
+            cursor: pointer;
+        }
+        .toread {
+            width: 150px;
+        }
+        a{
+            text-decoration:none;
+            color: black;
+        }
+        a:hover{
+            text-decoration:none;
+            color: black;
+        }
+        #dialog_window{
+            border-radius: 2px;
+        }
+        .osnov{
+           background-color: #E6E6E6;
+           height: 300px;
+        }
+        .dialog {
+            background-color: #FFF8DC;
+            border: 1px solid #D3D3D3;
+            margin-top:-1px;
+
+        }
+        #scroll_dialog{
+            margin-top: 25px;
+            height:195px;
+            width:400px;
+            border:1px solid #ccc;
+            font:16px/26px Georgia, Garamond, Serif;
+            overflow:auto;
+            background: #e4dbbf;
+        }
+        #message{
+            background-color: lightblue;
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+        #youmessage{
+            background-color: lightblue;
+            border-radius: 8px;
+            margin-bottom: 5px;
+        }
+        #frendmessage{
+            background-color: #B0C4DE;
+            border-radius: 8px;
+            margin-bottom: 5px;
+        }
+        .ontop{
+            position: absolute;
+            z-index: 100;
+            color:#848484;
+            cursor:pointer;
+        }
+        #top_navigation{
+            position: absolute;
+            width: 100%;
+            height: 25px;
+            background-color: rgba(0, 0, 0, 0.2);
+            font:16px/26px Georgia, Garamond, Serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="osnov">
+        <div class="head container-fluid">
+            <div class="row">
+                <div id="menu " class="col-4">
+                    <h2 id="burger" class="text-left"></h2>
+                </div>
+                <div id="menu" class="col-4">
+                    <h2 class="toread text-left"></h2>
+                </div>
+                <div id="menu" class="col-4">
+                    <h2  class="text-right"></h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="top_navigation">
+            <a href="popup_messages.html">
+                <div class="back ontop text-right col-0">←Назад</div>
+            </a>
+            <div class="name_dialog ontop text-center col-11">Name Dialog</div>
+        </div>
+        <div id="scroll_dialog" class="container-fluid">
+            <div id="dialog_window"></div>
+        </div>
+        <div class="margtop d-flex">
+            <input type="text" class="form-control col-9" id="plach" placeholder="Введите сообщение">
+            <button id="submit" class="btn btn-info col-3 text-left ">Отправить</button>
+        </div>
+    </div>
+
+    <div class="pd_menu" >
+        <div id="nav_pd_pen" class="head container-fluid">
+
+            <div class=" row">
+                <div id="user_image" class=" col-3"></div>
+
+                <div id="user_name" class="col-4 ">
+                    <h5 class="login text-center">Name</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="pd_menu_atr col-12">
+            <h5><a class="menu_btn" href="popup_main.html">Главная</a></h5>
+        </div>
+        <div class="pd_menu_atr col-12">
+            <h5><a class="menu_btn" href="popup_articles.html?table=toread">Запланированное</a></h5>
+        </div>
+        <div class="pd_menu_atr col-12">
+            <h5><a class="menu_btn" href="popup_articles.html?table=favorite">Избранное</a></h5>
+        </div>
+        <div class="pd_menu_atr col-12">
+            <h5><a class="menu_btn" href="popup_articles.html?table=read">Прочитанное</a></h5>
+        </div>
+        <div class="pd_menu_atr col-12">
+            <h5><a class="menu_btn" href="popup_messages.html">Сообщения</a></h5>
+        </div>
+        <div class="pd_menu_atr col-12">
+            <h5><a class="menu_btn" href="popup_settings.html">Настройки</a></h5>
+        </div>
+        <div class="hide_pd_menu"></div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="css/bootstrap.min.js"></script>
+</body>
+
+</html>

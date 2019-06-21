@@ -10,10 +10,11 @@
         html {
             width: 400px;
             height: 300px;
+            background: #e4dbbf;
         }
 
         .head {
-            background: #20e520;
+            background: #70ab8f;
         }
 
         #menu {
@@ -22,17 +23,17 @@
         }
 
         .body {
-            background: #ffffff;
+            background: #e4dbbf;
         }
 
         h2 {
             font-size: 5vh;
             line-height: 3vh;
-            color: white;
+            color: #383127;
         }
 
         h2:hover {
-            color: pink;
+            color: #dc5b21;
             cursor: pointer;
         }
 
@@ -64,7 +65,7 @@
             position: absolute;
             height: 300px;
             width: 250px;
-            background: white;
+            background: #e4dbbf;
             margin-top: -70px;
             z-index: 99;
             position: absolute;
@@ -76,7 +77,6 @@
             background-repeat: no-repeat;
             background-size: contain;
             height: 75px;
-            border-radius: 100px;
             opacity: .7;
             margin-left: 10px;
             margin-top: 10px;
@@ -86,6 +86,9 @@
             padding: 29px
         }
 
+        .pd_menu_atr {
+            height: 30px;
+        }
         .pd_menu_atr:hover {
             background: silver;
             cursor: pointer;
@@ -114,17 +117,13 @@
         a {
             text-decoration: none;
             color: black;
-
-        }
-        a {
-            text-decoration: none;
-            color: black;
         }
 
         .dialog {
-            background-color: #E6E6E6;
-            border: 1px solid #585858;
-            border-radius: 2px;
+            background-color: #FFF8DC;
+            border: 1px solid #D3D3D3;
+            margin-top:-1px;
+
         }
         #scrol_dialog{
             height:255px;
@@ -132,6 +131,7 @@
             border:1px solid #ccc;
             font:16px/26px Georgia, Garamond, Serif;
             overflow:auto;
+            background: #e4dbbf;
         }
         #invisible{
             position: absolute;
@@ -146,11 +146,22 @@
             border-radius: 10px;
             margin-bottom: 5px;
         }
+        #youmessage{
+            background-color: lightblue;
+            border-radius: 8px;
+            margin-bottom: 5px;
+        }
+        #frendmessage{
+            background-color: #B0C4DE;
+            border-radius: 8px;
+            margin-bottom: 5px;
+        }
         #back{
             position: absolute;
             z-index: 100;
             color:#848484;
-            cursor:pointer;}
+            cursor:pointer;
+        }
     </style>
 </head>
 
@@ -164,45 +175,17 @@
                 <div id="menu" class="col-4">
                     <h2 class="toread text-left"></h2>
                 </div>
-                <div id="menu" class="col-4">
-                    <h2 class="text-right">head</h2>
+                <div class="col-4" style="font-family: 'sans-serif'">
+                    <a class="text-center" href="popup_search.html" style="font-size: 1rem; line-height: 1; text-align: center" >Новое сообщение</a>
                 </div>
             </div>
         </div>
-
-        <div id="scrol_dialog" class="container-fluid dialogs">
-            <!-- диалог 2 -->
-            <div class="dialogka col-12 dialog">
-                <div>
-                    <h6>Name dialog</h6>
-                </div>
-                <div>last message,last message, last mes...</div>
-            </div>
-        </div>
-    </div>
-
-    <div id="invisible" class="">
-    <div id="scrol_dialog" class="container-fluid">
-            <div id="dialog_window" >
-                <div id="back" class="text-right col-0">←Назад</div>
-                <div class="text-center col-12"><h6>Name Dialog</h6></div>
-
-                <div id="message" class="col-6 text-left">1user message</div>
-                <div id="message" class="col-6 offset-6 text-right">2user message</div>
-                <div id="message" class="col-6 text-left">1user message</div>
-                <div id="message" class="col-6 text-left">1user message</div>
-                <div id="message" class="col-6 offset-6 text-right">2user message</div>
-                <div id="message" class="col-6 text-left">1user message</div>
-                <div id="message" class="col-6 offset-6 text-right">2user message</div>
-                <div id="message" class="col-6 text-left">1user message</div>
-                <div id="message" class="col-6 text-left">1user message</div>
-                <div id="message" class="col-6 offset-6 text-right">2user message</div>
-            </div>
-        </div>
+        <div id="scrol_dialog" class="dialogs"></div>
     </div>
 
     <div class="pd_menu">
         <div id="nav_pd_pen " class="head container-fluid">
+
             <div class=" row">
                 <div id="user_image" class=" col-3"></div>
 
